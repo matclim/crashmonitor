@@ -6,9 +6,12 @@ import json
 
 DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1283103266791493642/0Ih6VjTZpm8GV3aLBIk3AnVygggNNwVdwUTgi1Dxeiix0LL7LMeOFfhbeyAqor7ppv7g"
 
+TAG_ID = "<@&1283119549620818010>"
+
 def send_discord_notification(title, body):
     data = {
-        "embeds": [{
+     "content": f"{TAG_ID} A program has crashed!",
+            "embeds": [{
             "title": title,
             "description": body,
             "color": 16711680
